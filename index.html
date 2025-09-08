@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jamate Raza - Islamic Teachings</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter for general text, Amiri for Arabic/Islamic text -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-white shadow-lg py-4">
+        <div class="container mx-auto px-3 flex justify-between items-center">
+            <!-- Website Logo/Name -->
+            <a href="#" class="text-3xl md:text-5xl font-bold golden-text hover:opacity-80 transition-opacity header-logo-text">Jamate Raza</a>
+
+            <div class="flex items-center space-x-4">
+                <!-- Dark Mode Toggle Button -->
+                <button id="dark-mode-toggle" class="text-gray-700 text-2xl focus:outline-none p-2 rounded-md hover:bg-gray-100 transition-colors">
+                    <i class="fas fa-moon" id="dark-mode-icon"></i>
+                </button>
+
+                <!-- Mobile Menu Toggle (Hamburger Icon) - Only visible on small screens -->
+                <button id="mobile-menu-toggle" class="lg:hidden text-gray-700 text-2xl focus:outline-none p-2 rounded-md hover:bg-gray-100 transition-colors">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay (Hidden by default) -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-gray-900 bg-opacity-90 z-50 flex flex-col items-center justify-center hidden opacity-0 transition-opacity duration-300">
+        <button id="mobile-menu-close" class="absolute top-6 right-6 text-white text-3xl focus:outline-none p-2 rounded-md hover:bg-gray-700 transition-colors">
+            <i class="fas fa-times"></i>
+        </button>
+        <nav>
+            <ul class="flex flex-col space-y-6 text-white text-3xl font-semibold">
+                <!-- Navigation links intentionally removed as per previous request -->
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="golden-bg text-white py-20 md:py-32 text-center shadow-md relative overflow-hidden">
+        <!-- Video Background Container -->
+        <div class="hero-video-container">
+            <video autoplay loop muted playsinline>
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-gold-liquid-flow-background-1262-large.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <!-- Bismillah text with animation -->
+            <p class="urdu-bismillah mb-2 hero-text-animate" style="animation-delay: 0.1s;">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</p>
+            <!-- Main heading with animation -->
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 hero-text-animate hero-main-heading" style="animation-delay: 0.2s;">
+                Illuminating the Path of Knowledge
+            </h1>
+            <!-- Subtitle/description with animation -->
+            <p class="text-xl md:text-2xl mb-8 max-w-4xl mx-auto opacity-90 hero-text-animate hero-sub-text" style="animation-delay: 0.3s;">
+                Dive deep into the wisdom of Islamic teachings, explore insightful articles, and connect with a vibrant community.
+            </p>
+            <!-- Call to action button with animation -->
+            <a href="sunni-ai2.html" class="golden-button text-lg interactive-element hero-button-animate" style="animation-delay: 0.4s;">Explore Sunni AI</a>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow container mx-auto px-4 py-12 md:py-16">
+
+        <!-- Islamic Teachings Section -->
+        <section id="teachings" class="white-section p-8 md:p-10 mb-12"> <!-- Reduced vertical padding -->
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-10">
+                Core Islamic Teachings
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8"> <!-- Adjusted grid and gap -->
+                <!-- Teaching Card: Qibla Finder -->
+                <a href="qibla-finder.html" class="p-6 border border-gray-200 rounded-lg shadow-sm text-center interactive-element block">
+                    <i class="fas fa-compass text-5xl golden-text mb-4"></i> <!-- Golden Compass Icon -->
+                    <h3 class="text-2xl font-semibold mb-3 teaching-card-title">Qibla Finder</h3>
+                    <p class="text-gray-600 teaching-card-description">That Can Help You For Find Qibla.</p>
+                </a>
+                <!-- Teaching Card: Sunni Calendar -->
+                <a href="sunni-calnder.html" class="p-6 border border-gray-200 rounded-lg shadow-sm text-center interactive-element block">
+                    <i class="fas fa-calendar-alt text-5xl golden-text mb-4"></i> <!-- Golden Calendar Icon -->
+                    <h3 class="text-2xl font-semibold mb-3 teaching-card-title">Sunni Calnder</h3>
+                    <p class="text-gray-600 teaching-card-description">AI Sunni Calnder.</p>
+                </a>
+                <!-- Teaching Card: Islaislamic_jurisprudence.htmlmic Jurisprudence (Fiqh) -->
+                <a href="islamic-books.html" class="p-6 border border-gray-200 rounded-lg shadow-sm text-center interactive-element block">
+                    <i class="fas fa-mosque text-5xl golden-text mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-3 teaching-card-title">Islamic Jurisprudence (Fiqh)</h3>
+                    <p class="text-gray-600 teaching-card-description">Guidance on Islamic law and its application in contemporary issues.</p>
+                </a>
+                <!-- Teaching Card: Aqidah (Creed) -->
+                <a href="Quran-Audio.html" class="p-6 border border-gray-200 rounded-lg shadow-sm text-center interactive-element block">
+                    <i class="fas fa-star-and-crescent text-5xl golden-text mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-3 teaching-card-title">Aqidah (Creed)</h3>
+                    <p class="text-gray-600 teaching-card-description">Explore the fundamental beliefs and tenets of Islam.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Community Section -->
+        <section id="community" class="dark-golden-bg text-white p-8 md:p-12 mb-12 text-center rounded-xl shadow-lg">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6 text-white">
+                Join Our Growing Community
+            </h2>
+            <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto community-section-text">
+                Connect with like-minded individuals, engage in discussions, and deepen your understanding of Islam.
+            </p>
+            <a href="https://whatsapp.com/channel/0029VbAnil7AzNbrSty8BC2n" target="_blank" class="golden-button bg-green-500 text-white hover:bg-green-600 interactive-element community-button-animate">
+                <i class="fab fa-whatsapp mr-2"></i> Join WhatsApp Group
+            </a>
+        </section>
+
+        <!-- Feedback Button Section -->
+        <section id="feedback-button-section" class="py-4 text-center"> <!-- Reduced vertical padding -->
+            <button id="open-feedback-modal" class="golden-button text-lg interactive-element">
+                <i class="fas fa-comment-alt mr-2"></i> Send Feedback
+            </button>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 text-3xl mb-6">
+                <!-- Social media links with hover effects -->
+                <a href="https://wa.me/9152398605" target="_blank" class="hover:text-green-500 transition-colors social-icon-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.youtube.com/@JamateRaza" target="_blank" class="hover:text-red-600 transition-colors social-icon-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/jamate.raza" target="_blank" class="hover:text-pink-500 transition-colors social-icon-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="text-sm text-gray-400 footer-text">&copy; 2025 Jamate Raza. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Feedback Modal -->
+    <div id="feedback-modal-overlay" class="feedback-modal-overlay">
+        <div class="feedback-modal-content white-section">
+            <span id="feedback-modal-close" class="feedback-modal-close">&times;</span>
+            <h3 class="text-2xl font-bold text-center mb-6 golden-text">Send Us Your Feedback</h3>
+            <form id="feedback-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                <input type="hidden" name="access_key" value="7df331cb-2eeb-46c5-9f4a-196b7c542770">
+                <div>
+                    <label for="feedback-name" class="block text-gray-700 text-sm font-bold mb-1">Your Name (Optional)</label>
+                    <input type="text" id="feedback-name" name="name" class="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="Enter your name">
+                </div>
+                <div>
+                    <label for="feedback-email" class="block text-gray-700 text-sm font-bold mb-1">Your Email (Optional)</label>
+                    <input type="email" id="feedback-email" name="email" class="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="Enter your email for a reply">
+                </div>
+                <div>
+                    <label for="feedback-message" class="block text-gray-700 text-sm font-bold mb-1">Your Message <span class="text-red-500">*</span></label>
+                    <textarea id="feedback-message" name="message" rows="5" class="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="Tell us what you think..." required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="golden-button interactive-element">Submit Feedback</button>
+                </div>
+                <div id="feedback-status-message" class="message-box hidden"></div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
